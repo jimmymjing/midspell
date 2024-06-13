@@ -18,7 +18,7 @@ export default function HomeHeader() {
   return (
     <header className="bg-gray-900">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-2 lg:px-8"
+        className="mx-auto flex items-center justify-between p-2 lg:px-8"
         aria-label="Global"
       >
         <div className="flex flex-1">
