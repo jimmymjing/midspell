@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-
+import { Providers } from "./providers";
 const inter = Inter({ subsets: ["latin"] });
 const walsheim = localFont({
   src: "../assets/fonts/GTWalsheimPro-Medium.woff2",
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} ${walsheim.variable} antialiased`}>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

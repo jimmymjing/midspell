@@ -4,6 +4,7 @@ import { PlaceholdersAndVanishInputDemo } from "@/components/home-hero-searchbar
 import HomeVidSpline from "@/components/home-vid-spline";
 import SearchbarHeader from "@/components/searchbar-header";
 import Image from "next/image";
+import { Button } from "@nextui-org/button";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
             </p>
           </div>
           <PlaceholdersAndVanishInputDemo />
+          {/* <Button>Click me</Button> */}
           {/* <HomeVidSpline /> */}
         </div>
       </BackgroundGradientAnimation>
