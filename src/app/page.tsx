@@ -2,9 +2,8 @@ import { BackgroundGradientAnimation } from "@/components/background-gradient-an
 import HomeHeader from "@/components/home-header";
 import { PlaceholdersAndVanishInputDemo } from "@/components/home-hero-searchbar";
 import HomeVidSpline from "@/components/home-vid-spline";
-import SearchbarHeader from "@/components/searchbar-header";
-import Image from "next/image";
-import { Button } from "@nextui-org/button";
+
+import HeroSuggestionChip from "@/components/hero-suggestion-chip";
 
 export default function Home() {
   return (
@@ -25,16 +24,20 @@ export default function Home() {
             </p>
           </div>
           <PlaceholdersAndVanishInputDemo />
-          {/* <Button>Click me</Button> */}
-          {/* <HomeVidSpline /> */}
+          {/* <HeroBtn /> */}
+          <div className="flex flex-row items-center justify-center gap-3 pt-5 align-middle">
+            <div className="text-sm text-white/80">Trending searches</div>
+            <HeroSuggestionChip clr="primary">Illustration</HeroSuggestionChip>
+          </div>
         </div>
       </BackgroundGradientAnimation>
-      <div className="z-50 -mt-96 w-full items-center justify-center">
+      <div className="z-50 -mt-72 w-full items-center justify-center">
         <HomeVidSpline />
       </div>
       <h1 className="m-auto w-[700px] pt-28 text-center font-walsheim text-[84px] leading-[6rem] text-black">
         abc
       </h1>
+      {/* <TagGroupFilter /> */}
     </main>
   );
 }
