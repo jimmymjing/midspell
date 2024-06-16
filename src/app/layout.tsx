@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const walsheim = localFont({
+  src: "../assets/fonts/GTWalsheimPro-Medium.woff2",
+  variable: "--font-walsheim",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} ${walsheim.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }

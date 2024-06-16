@@ -50,7 +50,9 @@ export default function HomeHeader() {
         </a>
         <div className="flex flex-1 items-center justify-end gap-2">
           <SearchbarHeader />
-          <Button onClick={signInHandler}>Sign In</Button>
+          <Button className="ml-2" onClick={signInHandler}>
+            Sign In
+          </Button>
         </div>
       </nav>
     </header>
