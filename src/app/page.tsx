@@ -4,6 +4,7 @@ import { PlaceholdersAndVanishInputDemo } from "@/components/home-hero-searchbar
 import HomeVidSpline from "@/components/home-vid-spline";
 
 import HeroSuggestionChip from "@/components/hero-suggestion-chip";
+import PlatformLogoScroller from "@/components/platform-logo-scroller";
 
 const suggestionChipList: string[] = [
   "illustration",
@@ -21,8 +22,8 @@ export default function Home() {
       {/* <SearchbarHeader width={400} /> */}
       <BackgroundGradientAnimation>
         <div className="absolute z-50 w-full items-center justify-center">
-          <div className="z-50 flex h-[150px] flex-col justify-center bg-gradient-to-b from-gray-900 to-transparent"></div>
-          <div className="mx-auto -mt-[100px] max-w-3xl text-center">
+          <div className="pointer-events-none z-50 flex h-[150px] flex-col justify-center bg-gradient-to-b from-gray-900 to-transparent"></div>
+          <div className="pointer-events-none mx-auto -mt-[100px] max-w-3xl text-center">
             <h1 className="pt-28 font-walsheim text-[112px] leading-[7rem] text-white">
               Find your next
               <br />
@@ -45,14 +46,14 @@ export default function Home() {
           </div>
         </div>
       </BackgroundGradientAnimation>
-      <div className="z-50 -mt-[300px] flex h-[300px] flex-col justify-center bg-gradient-to-b from-transparent to-black"></div>
+      <div className="pointer-events-none z-50 -mt-[300px] flex h-[300px] flex-col justify-center bg-gradient-to-b from-transparent to-black"></div>
       <div className="relative z-50 w-full items-center justify-center bg-black/100">
         <div className="relative z-50 -mt-64 w-full items-center justify-center">
           <HomeVidSpline />
           {/* <div className="absolute top-0 flex h-[800px] w-full flex-col justify-center bg-black/30"></div> */}
         </div>
       </div>
-
+      <PlatformLogoScroller />
       <h1 className="m-auto w-[700px] pt-28 text-center font-walsheim text-[84px] leading-[6rem] text-black">
         abc
       </h1>
