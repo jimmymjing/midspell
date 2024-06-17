@@ -1,24 +1,27 @@
 "use client";
 import React, { useEffect } from "react";
 import LogoScrollerItem from "./logo-scroller-item";
-import useMeasure from "react-use-measure";
+
 import { animate, motion, useMotionValue } from "framer-motion";
+import lumaLogoSrc from "@/assets/images/hp-platform-logos/luma-ai-logo.svg";
+import haiperLogoSrc from "@/assets/images/hp-platform-logos/haiper-logo.svg";
+import openAILogoSrc from "@/assets/images/hp-platform-logos/openai-logo.svg";
+import midjourneyLogoSrc from "@/assets/images/hp-platform-logos/midjourney-white.svg";
+import runwayLogoSrc from "@/assets/images/hp-platform-logos/runway-white.svg";
+import stabilityLogoSrc from "@/assets/images/hp-platform-logos/stability-ai-seeklogo-white.svg";
+import pikaLogoSrc from "@/assets/images/hp-platform-logos/pika-white.svg";
+import nightcafeLogoSrc from "@/assets/images/hp-platform-logos/night-cafe-logo-white.webp";
+import geminiLogoSrc from "@/assets/images/hp-platform-logos/google-gemini-logo-white.svg";
+import leonardoLogoSrc from "@/assets/images/hp-platform-logos/leonardo-logo-white.svg";
+import fireflyLogoSrc from "@/assets/images/hp-platform-logos/firefly-white.svg";
+import Image from "next/image";
+import ScrollerLogos from "./scroller-logos";
+import { useMeasure } from "@uidotdev/usehooks";
 
 const images = [
   "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80",
   "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
   "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
-  "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
-  "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
-  "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
-  "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
-  "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
-  "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
-  "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
-  "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
-  "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
-  "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80",
-  "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
 ].map((image) => ({
   id: crypto.randomUUID(),
   image,
@@ -30,12 +33,12 @@ export default function PlatformLogoScroller() {
 
   useEffect(() => {
     let controls;
-    let finalPosition = -width / 2 - 32;
-    console.log("finalPosition", finalPosition);
+    let finalPosition = -width / 2 - 56;
+    console.log("width", width);
 
     controls = animate(xTranslation, [0, finalPosition], {
       ease: "linear",
-      duration: 30,
+      duration: 50,
       repeat: Infinity,
       repeatType: "loop",
       repeatDelay: 0,
@@ -45,12 +48,23 @@ export default function PlatformLogoScroller() {
   }, [width, xTranslation]);
 
   return (
-    <div className="flex w-full flex-row overflow-hidden">
-      <motion.div className="flex gap-16" ref={ref} style={{ x: xTranslation }}>
-        {[...images, ...images].map((item, idx) => (
-          <LogoScrollerItem key={item.id} img={item.image} />
-        ))}
-      </motion.div>
-    </div>
+    <>
+      <div className="relative h-[100px] w-full overflow-hidden">
+        <motion.div
+          ref={ref}
+          className="absolute flex flex-row gap-28 overflow-hidden bg-black"
+          style={{ x: xTranslation }}
+        >
+          <ScrollerLogos />
+          <ScrollerLogos />
+          {/* <ScrollerLogos />
+        <ScrollerLogos /> */}
+
+          {/* {[...images, ...images].map((item, idx) => (
+            <LogoScrollerItem key={idx} img={item.image} />
+          ))} */}
+        </motion.div>
+      </div>
+    </>
   );
 }
