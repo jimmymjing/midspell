@@ -5,6 +5,7 @@ import HomeVidSpline from "@/components/home-vid-spline";
 
 import HeroSuggestionChip from "@/components/hero-suggestion-chip";
 import PlatformLogoScroller from "@/components/platform-logo-scroller";
+import { ParallaxScrollImages } from "@/components/parallaxScrollPromptImages";
 
 const suggestionChipList: string[] = [
   "illustration",
@@ -54,6 +55,7 @@ export default function Home() {
         </div>
       </div>
       <PlatformLogoScroller />
+      <ParallaxScrollImages />
       <h1 className="m-auto w-[700px] pt-28 text-center font-walsheim text-[84px] leading-[6rem] text-black">
         abc
       </h1>
