@@ -49,7 +49,7 @@ export default function PlatformLogoScroller() {
 
   return (
     <>
-      <div className="relative h-[100px] w-full overflow-hidden">
+      <div className="relative h-[100px] w-full overflow-hidden bg-black">
         <motion.div
           ref={ref}
           className="absolute flex flex-row gap-28 overflow-hidden bg-black"
@@ -63,7 +63,11 @@ export default function PlatformLogoScroller() {
           {/* {[...images, ...images].map((item, idx) => (
             <LogoScrollerItem key={idx} img={item.image} />
           ))} */}
+          {/* <div className="absolute h-full w-full bg-gradient-to-l from-black from-0% to-white to-100%"></div> */}
         </motion.div>
+        <div className="absolute h-[50px] w-screen bg-gradient-to-r from-black from-5% to-30%"></div>
+        <div className="absolute h-[50px] w-screen bg-gradient-to-l from-black from-5% to-30%"></div>
+        {/* <div className="absolute h-full w-screen bg-gradient-to-r from-black from-0% to-white to-20%"></div> */}
       </div>
     </>
   );

@@ -9,7 +9,7 @@ import {
   MouseParallaxChild,
 } from "react-parallax-mouse";
 
-export default function TestParaScroll() {
+export default function PromptParaScroll() {
   return (
     // <main className="flex min-h-[300vh] flex-col items-center justify-between p-24">
     //   <Test />
@@ -41,32 +41,18 @@ export default function TestParaScroll() {
 
         <div className="flex h-full flex-col overflow-clip">
           <MouseParallaxContainer
-            globalFactorX={0.1}
-            globalFactorY={0.1}
-            className="relative h-full w-full"
+            globalFactorX={0.05}
+            globalFactorY={0.05}
+            className="h-full w-full"
+            inverted={true}
           >
             <div className="relative ml-auto mr-auto flex h-full w-[90%] max-w-[1280px] flex-col items-center">
-              {/* <div className="flex h-full w-full flex-col items-center gap-1 bg-slate-500"> */}
-              {/* <div className="h-[100px] w-[100px] bg-red-300">abc</div>
-            <div className="h-[100px] w-[100px] bg-red-300">abc</div> */}
-              <MouseParallaxChild
-                style={{
-                  //filter: "brightness(0.3)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "auto",
-                  height: "100%",
-                }}
-                inverted={true}
-                factorX={0.3}
-                factorY={0.5}
-              >
+              <MouseParallaxChild factorX={0.3} factorY={0.5}>
                 <Parallax
                   speed={20}
                   // translateY={[-20, 20]}
-                  translateX={["-300px", "-300px"]}
-                  className="absolute bottom-auto top-32 z-[2] inline-block max-w-full -translate-x-[27rem] cursor-pointer overflow-visible rounded-sm brightness-75 hover:brightness-100 hover:duration-300"
+                  translateX={["-500px", "-500px"]}
+                  className="absolute bottom-auto top-32 z-[2] inline-block max-w-full cursor-pointer overflow-visible rounded-sm brightness-75 hover:brightness-100 hover:duration-300"
                 >
                   <Link href="https://www.google.com" target="_blank">
                     <Image
