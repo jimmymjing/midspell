@@ -13,6 +13,7 @@ import skatePark from "@/assets/images/parallax-prompt-content/jimmymjing_backya
 import posterArt from "@/assets/images/parallax-prompt-content/jimmymjing_text_POSTER_ART_in_bold_letters._Minimalist_halfto_b28d5e95-e2dd-43d3-bf81-cd41a1181395_2.png";
 import oldWoman from "@/assets/images/parallax-prompt-content/jimmymjing_old_woman_in_the_park_pixar_studio_style_--v_5.2_bd34cc3f-b36e-4612-b586-1c3b4e2b19ea_0.png";
 import pixelArt from "@/assets/images/parallax-prompt-content/jimmymjing_Pixel_art_--ar_23_40d6ade5-6489-4dda-a01b-ae2630c1e496.png";
+import giganticMecha from "@/assets/images/parallax-prompt-content/jimmymjing_gigantic_mecha_looming_over_cyberpunk_city_on_sunn_4b6061f7-7436-47dc-ad71-dd9971324b55_1.png";
 import {
   MouseParallaxContainer,
   MouseParallaxChild,
@@ -53,6 +54,10 @@ export default function PromptParaScroll() {
     <>
       {/* miw_content-track */}
       <div className="relative h-[150rem] overflow-clip bg-black">
+        <div className="pointer-events-none absolute z-20 h-[150rem] w-full bg-gradient-to-t from-black from-0% to-10%">
+          ddd
+        </div>
+        {/* <div className="relative h-[150rem] overflow-clip bg-gradient-to-t from-black from-0% to-10%"> */}
         {/* miw_overlay-track */}
         <div className="pointer-events-none absolute bottom-0 left-0 right-0 top-0 z-10">
           {/* miw_overlay-content */}
@@ -61,10 +66,10 @@ export default function PromptParaScroll() {
             <div>
               <Link
                 href="https://www.google.com"
-                className="pointer-events-auto relative flex w-[37rem] max-w-full cursor-pointer justify-center overflow-hidden rounded-xl bg-slate-500 p-8 align-middle text-black"
+                className="pointer-events-auto relative flex w-[37rem] max-w-full cursor-pointer justify-center overflow-hidden rounded-xl bg-black/30 p-8 align-middle text-black backdrop-blur-md"
               >
                 {/* miw_badge-inner */}
-                <div className="pointer-events-auto relative z-10 flex align-middle">
+                <div className="pointer-events-auto relative z-10 flex align-middle font-walsheim text-[50px] text-white">
                   {/* symbo */}
                   Summoned in midspell
                 </div>
@@ -205,15 +210,15 @@ export default function PromptParaScroll() {
                 </Link>
               </PromptParaItem>
               <PromptParaItem
-                transX="-300px"
-                top="top-[123rem]"
-                speed={20}
+                transX="-450px"
+                top="top-[120rem]"
+                speed={25}
                 factorX={0.5}
                 factorY={0.5}
               >
                 <Link href="https://www.google.com" target="_blank">
                   <Image
-                    src={pixelArt}
+                    src={giganticMecha}
                     alt="logo"
                     className="relative max-w-[20rem] rounded-sm object-cover align-middle"
                   />
