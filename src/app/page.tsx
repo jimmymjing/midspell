@@ -6,7 +6,7 @@ import HomeVidSpline from "@/components/home-vid-spline";
 import HeroSuggestionChip from "@/components/hero-suggestion-chip";
 import PlatformLogoScroller from "@/components/platform-logo-scroller";
 import { ParallaxScrollImages } from "@/components/parallaxScrollPromptImages";
-import PromptParaScroll from "./scratch/para-scroll-test2/page";
+import PromptParaScroll from "../components/PromptParaScroll";
 
 const suggestionChipList: string[] = [
   "illustration",
