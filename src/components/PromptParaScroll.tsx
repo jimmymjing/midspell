@@ -85,6 +85,7 @@ export default function PromptParaScroll() {
             globalFactorY={0.05}
             className="h-full w-full"
             inverted={true}
+            useWindowMouseEvents={true}
           >
             <div className="relative ml-auto mr-auto flex h-full w-[90%] max-w-[1280px] flex-col items-center">
               <PromptParaItem
