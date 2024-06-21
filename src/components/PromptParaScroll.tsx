@@ -18,6 +18,9 @@ import {
   MouseParallaxContainer,
   MouseParallaxChild,
 } from "react-parallax-mouse";
+import { Button } from "@nextui-org/button";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { motion } from "framer-motion";
 
 function PromptParaItem({
   children,
@@ -54,9 +57,7 @@ export default function PromptParaScroll() {
     <>
       {/* miw_content-track */}
       <div className="relative h-[150rem] overflow-clip bg-black">
-        <div className="pointer-events-none absolute z-20 h-[150rem] w-full bg-gradient-to-t from-black from-0% to-10%">
-          ddd
-        </div>
+        <div className="pointer-events-none absolute z-20 h-[150rem] w-full bg-gradient-to-t from-black from-0% to-10%"></div>
         {/* <div className="relative h-[150rem] overflow-clip bg-gradient-to-t from-black from-0% to-10%"> */}
         {/* miw_overlay-track */}
         <div className="pointer-events-none absolute bottom-0 left-0 right-0 top-0 z-10">
@@ -94,30 +95,64 @@ export default function PromptParaScroll() {
                 factorX={0.5}
                 factorY={0.8}
               >
-                <Link href="https://www.google.com" target="_blank">
+                <Link
+                  href="https://www.google.com"
+                  target="_blank"
+                  className="relative"
+                >
                   <Image
                     src={pastelCat}
                     alt="logo"
                     className="relative max-w-[20rem] rounded-sm object-cover align-middle"
                   />
+                  <div className="absolute left-2 top-2 rounded-sm bg-black/60 px-4 py-2 text-sm text-white">
+                    Midjourney | V6
+                  </div>
+                  <div className="absolute bottom-3 left-0 w-full px-4 py-2 text-4xl font-semibold text-white">
+                    <h1 className="drop-shadow-lg">Pastel colored cat</h1>
+                  </div>
                 </Link>
               </PromptParaItem>
               <PromptParaItem transX="200px" top="top-[9rem]" speed={10}>
-                <Link href="https://www.google.com" target="_blank">
+                <Link
+                  href="https://www.google.com"
+                  target="_blank"
+                  className="relative"
+                >
                   <Image
                     src={miyazakiTemple}
                     alt="logo"
                     className="relative max-w-[45rem] rounded-sm object-cover align-middle"
                   />
+                  <div className="absolute left-2 top-2 rounded-sm bg-black/60 px-4 py-2 text-sm text-white">
+                    Midjourney | Niji 6
+                  </div>
+                  <div className="absolute bottom-5 left-0 w-full px-4 py-2 text-4xl font-semibold text-white">
+                    <h1 className="drop-shadow-lg">
+                      Secluded path shrouded in mist
+                    </h1>
+                  </div>
                 </Link>
               </PromptParaItem>
               <PromptParaItem transX="-400px" top="top-[40rem]" speed={20}>
-                <Link href="https://www.google.com" target="_blank">
+                <Link
+                  href="https://www.google.com"
+                  target="_blank"
+                  className="relative"
+                >
                   <Image
                     src={beautifulUnique}
                     alt="logo"
                     className="relative max-w-[30rem] rounded-sm object-cover align-middle"
                   />
+                  <div className="absolute left-2 top-2 rounded-sm bg-black/60 px-4 py-2 text-sm text-white">
+                    Stable Diffusion | V3
+                  </div>
+                  <div className="absolute bottom-3 left-0 w-full px-4 py-2 text-4xl font-semibold text-white">
+                    <h1 className="drop-shadow-lg">
+                      Unconventional, mind-bending image
+                    </h1>
+                  </div>
                 </Link>
               </PromptParaItem>
               <PromptParaItem
@@ -127,12 +162,24 @@ export default function PromptParaScroll() {
                 factorX={0.3}
                 factorY={0.3}
               >
-                <Link href="https://www.google.com" target="_blank">
+                <Link
+                  href="https://www.google.com"
+                  target="_blank"
+                  className="relative"
+                >
                   <Image
                     src={womanSmoke}
                     alt="logo"
                     className="relative max-w-[40rem] rounded-sm object-cover align-middle"
                   />
+                  <div className="absolute left-2 top-2 rounded-sm bg-black/60 px-4 py-2 text-sm text-white">
+                    Stable Diffusion | V2.5
+                  </div>
+                  <div className="absolute bottom-20 left-0 w-full px-4 py-2 text-4xl font-semibold text-white">
+                    <h1 className="drop-shadow-lg">
+                      Fiery smoke by kodak portra 400
+                    </h1>
+                  </div>
                 </Link>
               </PromptParaItem>
               <PromptParaItem
@@ -142,12 +189,24 @@ export default function PromptParaScroll() {
                 factorX={0.4}
                 factorY={0.4}
               >
-                <Link href="https://www.google.com" target="_blank">
+                <Link
+                  href="https://www.google.com"
+                  target="_blank"
+                  className="relative"
+                >
                   <Image
                     src={spaghettiDesign}
                     alt="logo"
                     className="relative max-w-[25rem] rounded-sm object-cover align-middle"
                   />
+                  <div className="absolute left-2 top-2 rounded-sm bg-black/60 px-4 py-2 text-sm text-white">
+                    DALL·E | V3
+                  </div>
+                  <div className="absolute bottom-3 left-0 w-full px-4 py-2 text-4xl font-semibold text-white">
+                    <h1 className="drop-shadow-lg">
+                      Spaghetti packaging design
+                    </h1>
+                  </div>
                 </Link>
               </PromptParaItem>
               <PromptParaItem
@@ -157,12 +216,22 @@ export default function PromptParaScroll() {
                 factorX={0.6}
                 factorY={0.5}
               >
-                <Link href="https://www.google.com" target="_blank">
+                <Link
+                  href="https://www.google.com"
+                  target="_blank"
+                  className="relative"
+                >
                   <Image
                     src={walkingCat}
                     alt="logo"
                     className="relative max-w-[25rem] rounded-sm object-cover align-middle"
                   />
+                  <div className="absolute left-2 top-2 rounded-sm bg-black/60 px-4 py-2 text-sm text-white">
+                    Midjourney | Niji 5
+                  </div>
+                  <div className="absolute bottom-3 left-0 w-full px-4 py-2 text-4xl font-semibold text-white">
+                    <h1 className="drop-shadow-lg">Cat walking over puddles</h1>
+                  </div>
                 </Link>
               </PromptParaItem>
               <PromptParaItem
@@ -172,12 +241,22 @@ export default function PromptParaScroll() {
                 factorX={0.3}
                 factorY={0.3}
               >
-                <Link href="https://www.google.com" target="_blank">
+                <Link
+                  href="https://www.google.com"
+                  target="_blank"
+                  className="relative"
+                >
                   <Image
                     src={skatePark}
                     alt="logo"
                     className="relative max-w-[45rem] rounded-sm object-cover align-middle"
                   />
+                  <div className="absolute left-2 top-2 rounded-sm bg-black/60 px-4 py-2 text-sm text-white">
+                    Stable Diffusion | V2.5
+                  </div>
+                  <div className="absolute bottom-3 left-0 w-full px-4 py-2 text-4xl font-semibold text-white">
+                    <h1 className="drop-shadow-lg">Backyard skatepark</h1>
+                  </div>
                 </Link>
               </PromptParaItem>
               <PromptParaItem
@@ -187,12 +266,24 @@ export default function PromptParaScroll() {
                 factorX={0.4}
                 factorY={0.4}
               >
-                <Link href="https://www.google.com" target="_blank">
+                <Link
+                  href="https://www.google.com"
+                  target="_blank"
+                  className="relative"
+                >
                   <Image
                     src={posterArt}
                     alt="logo"
                     className="relative max-w-[40rem] rounded-sm object-cover align-middle"
                   />
+                  <div className="absolute left-2 top-2 rounded-sm bg-black/60 px-4 py-2 text-sm text-white">
+                    DALL·E | V3
+                  </div>
+                  <div className="absolute bottom-3 left-0 w-full px-4 py-2 text-4xl font-semibold text-white">
+                    <h1 className="drop-shadow-lg">
+                      Minimalist halftone print
+                    </h1>
+                  </div>
                 </Link>
               </PromptParaItem>
               <PromptParaItem
@@ -202,12 +293,22 @@ export default function PromptParaScroll() {
                 factorX={0.6}
                 factorY={0.4}
               >
-                <Link href="https://www.google.com" target="_blank">
+                <Link
+                  href="https://www.google.com"
+                  target="_blank"
+                  className="relative"
+                >
                   <Image
                     src={oldWoman}
                     alt="logo"
                     className="relative max-w-[30rem] rounded-sm object-cover align-middle"
                   />
+                  <div className="absolute left-2 top-2 rounded-sm bg-black/60 px-4 py-2 text-sm text-white">
+                    DALL·E | V3
+                  </div>
+                  <div className="absolute bottom-5 left-0 w-full px-4 py-2 text-4xl font-semibold text-white">
+                    <h1 className="drop-shadow-lg">Old woman in the park</h1>
+                  </div>
                 </Link>
               </PromptParaItem>
               <PromptParaItem
@@ -217,15 +318,34 @@ export default function PromptParaScroll() {
                 factorX={0.5}
                 factorY={0.5}
               >
-                <Link href="https://www.google.com" target="_blank">
+                <Link
+                  href="https://www.google.com"
+                  target="_blank"
+                  className="relative"
+                >
                   <Image
                     src={giganticMecha}
                     alt="logo"
                     className="relative max-w-[20rem] rounded-sm object-cover align-middle"
                   />
+                  <div className="absolute left-2 top-2 rounded-sm bg-black/60 px-4 py-2 text-sm text-white">
+                    Midjourney | Niji 6
+                  </div>
+                  <div className="absolute bottom-5 left-0 w-full px-4 py-2 text-4xl font-semibold text-white">
+                    <h1 className="drop-shadow-lg">Gigantic mecha</h1>
+                  </div>
                 </Link>
               </PromptParaItem>
             </div>
+            <motion.div
+              className="absolute bottom-8 z-30 m-auto flex w-full justify-center"
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+            >
+              <Button color="primary" size="lg" endContent={<ArrowRightIcon />}>
+                Browse more
+              </Button>
+            </motion.div>
           </MouseParallaxContainer>
         </div>
       </div>

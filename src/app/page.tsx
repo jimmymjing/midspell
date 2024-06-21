@@ -24,14 +24,14 @@ export default function Home() {
       {/* <SearchbarHeader width={400} /> */}
       <BackgroundGradientAnimation>
         <div className="absolute z-50 w-full items-center justify-center">
-          <div className="pointer-events-none z-50 flex h-[150px] flex-col justify-center bg-gradient-to-b from-gray-900 to-transparent"></div>
+          <div className="pointer-events-none z-50 flex h-[150px] flex-col justify-center bg-gradient-to-b from-gray-900"></div>
           <div className="pointer-events-none mx-auto -mt-[100px] max-w-3xl text-center">
             <h1 className="pt-28 font-walsheim text-[112px] leading-[7rem] text-white">
               Find your next
               <br />
               AI spell
             </h1>
-            <p className="mt-6 text-xl leading-8 text-white/80">
+            <p className="pointer-events-none mt-6 text-xl leading-8 text-white/80">
               Explore a marketplace of enchanted AI prompts to empower your
               creativity and transform your ideas into magical realities
             </p>
