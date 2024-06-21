@@ -20,7 +20,7 @@ import {
 } from "react-parallax-mouse";
 import { Button } from "@nextui-org/button";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 function PromptParaItem({
   children,
@@ -64,7 +64,7 @@ export default function PromptParaScroll() {
           {/* miw_overlay-content */}
           <div className="sticky top-0 flex h-screen items-center justify-center align-middle">
             {/* miw_badge-outer */}
-            <div>
+            <motion.div initial={{ scale: 0.7 }} whileInView={{ scale: 1 }}>
               <Link
                 href="https://www.google.com"
                 className="pointer-events-auto relative flex w-[37rem] max-w-full cursor-pointer justify-center overflow-hidden rounded-xl bg-black/30 p-8 align-middle text-black backdrop-blur-md"
@@ -75,7 +75,7 @@ export default function PromptParaScroll() {
                   Summoned in midspell
                 </div>
               </Link>
-            </div>
+            </motion.div>
           </div>
         </div>
         {/* miw_content-w */}
