@@ -1,5 +1,12 @@
 "use client";
 import React from "react";
+import Video from "next-video";
+import BackgroundVideo from "next-video/background-video";
+import Player from "next-video/player";
+import wonderWoman from "/videos/-82f4-48e5-8867-5b3c6c1344e4.mp4";
+import goldenWoman from "/videos/golden-woman.mp4";
+import glass from "/videos/glass.mp4";
+import spaceman from "/videos/Final_00027.mp4";
 import urbanNinja from "@/assets/images/curate-images/jimmymjing_urban_ninja_in_fairy_kei_style_by_nick_knight_86909131-f2e5-4a96-b4b5-dec00476138c_2.png";
 import Image from "next/image";
 import { Button } from "@nextui-org/button";
@@ -27,12 +34,14 @@ export default function CuratedFreePromptSection() {
           />
         </PromptItem>
         <PromptItem modelTxt="Midjourney | V6" durTxt="Free – Mar 21st">
-          <Image
-            src={urbanNinja}
-            alt="Urban Ninja"
-            fill
-            className="object-cover"
-          />
+          <BackgroundVideo src={wonderWoman} autoPlay />;
+          {/* <Player src={awesomeVideo} /> */}
+        </PromptItem>
+        <PromptItem modelTxt="Midjourney | V6" durTxt="Free – Mar 21st">
+          <BackgroundVideo src={goldenWoman} autoPlay />;
+        </PromptItem>
+        <PromptItem modelTxt="Midjourney | V6" durTxt="Free – Mar 21st">
+          <BackgroundVideo src={spaceman} autoPlay />;
         </PromptItem>
       </div>
 

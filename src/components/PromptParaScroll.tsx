@@ -21,6 +21,7 @@ import {
 import { Button } from "@nextui-org/button";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { motion, useInView } from "framer-motion";
+import { MovingBorderButton } from "./nextui/moving-border";
 
 function PromptParaItem({
   children,
@@ -342,9 +343,15 @@ export default function PromptParaScroll() {
               initial={{ opacity: 0, scale: 0.5 }}
               whileInView={{ opacity: 1, scale: 1 }}
             >
-              <Button color="primary" size="lg" endContent={<ArrowRightIcon />}>
+              {/* <Button color="primary" size="lg" endContent={<ArrowRightIcon />}>
                 Browse more
-              </Button>
+              </Button> */}
+              <MovingBorderButton
+                // borderRadius="1.75rem"
+                className="border-slate-800 bg-slate-900 text-lg text-white"
+              >
+                Browse more
+              </MovingBorderButton>
             </motion.div>
           </MouseParallaxContainer>
         </div>
