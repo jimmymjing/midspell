@@ -1,13 +1,14 @@
-import { BackgroundGradientAnimation } from "@/components/background-gradient-animation";
+"use client";
+import { BackgroundGradientAnimation } from "@/components/landing-page/background-gradient-animation";
 import HomeHeader from "@/components/home-header";
 import { PlaceholdersAndVanishInputDemo } from "@/components/home-hero-searchbar";
-import HomeVidSpline from "@/components/home-vid-spline";
+import HomeVidSpline from "@/components/landing-page/home-vid-spline";
 
 import HeroSuggestionChip from "@/components/hero-suggestion-chip";
-import PlatformLogoScroller from "@/components/platform-logo-scroller";
-import { ParallaxScrollImages } from "@/components/parallaxScrollPromptImages";
-import PromptParaScroll from "../components/PromptParaScroll";
-import CuratedFreePromptSection from "@/components/curate-free-prompt-section";
+import PlatformLogoScroller from "@/components/landing-page/platform-logo-scroller";
+import PromptParaScroll from "../components/landing-page/PromptParaScroll";
+import CuratedFreePromptSection from "@/components/landing-page/curate-free-prompt-section";
+import { motion } from "framer-motion";
 
 const suggestionChipList: string[] = [
   "illustration",
@@ -52,7 +53,17 @@ export default function Home() {
       <div className="pointer-events-none z-50 -mt-[300px] flex h-[300px] flex-col justify-center bg-gradient-to-b from-transparent to-black"></div>
       <div className="relative z-50 w-full items-center justify-center bg-black/100">
         <div className="relative z-50 -mt-64 w-full items-center justify-center">
-          <HomeVidSpline />
+          <motion.div
+            className="overflow-hidden brightness-50"
+            style={{ originY: 0, scale: 0.8 }}
+            // initial={{ scale: 0.8 }}
+            initial={false}
+            whileInView={{ filter: "brightness(1)" }}
+            viewport={{ once: false, amount: 0.4 }}
+            transition={{ delay: 0, duration: 0.5 }}
+          >
+            <HomeVidSpline />
+          </motion.div>
           {/* <div className="absolute top-0 flex h-[800px] w-full flex-col justify-center bg-black/30"></div> */}
         </div>
       </div>

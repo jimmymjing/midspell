@@ -1,20 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
-import LogoScrollerItem from "./logo-scroller-item";
 
 import { animate, motion, useMotionValue } from "framer-motion";
-import lumaLogoSrc from "@/assets/images/hp-platform-logos/luma-ai-logo.svg";
-import haiperLogoSrc from "@/assets/images/hp-platform-logos/haiper-logo.svg";
-import openAILogoSrc from "@/assets/images/hp-platform-logos/openai-logo.svg";
-import midjourneyLogoSrc from "@/assets/images/hp-platform-logos/midjourney-white.svg";
-import runwayLogoSrc from "@/assets/images/hp-platform-logos/runway-white.svg";
-import stabilityLogoSrc from "@/assets/images/hp-platform-logos/stability-ai-seeklogo-white.svg";
-import pikaLogoSrc from "@/assets/images/hp-platform-logos/pika-white.svg";
-import nightcafeLogoSrc from "@/assets/images/hp-platform-logos/night-cafe-logo-white.webp";
-import geminiLogoSrc from "@/assets/images/hp-platform-logos/google-gemini-logo-white.svg";
-import leonardoLogoSrc from "@/assets/images/hp-platform-logos/leonardo-logo-white.svg";
-import fireflyLogoSrc from "@/assets/images/hp-platform-logos/firefly-white.svg";
-import Image from "next/image";
 import ScrollerLogos from "./scroller-logos";
 import { useMeasure } from "@uidotdev/usehooks";
 

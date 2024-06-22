@@ -21,7 +21,7 @@ import {
 import { Button } from "@nextui-org/button";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { motion, useInView } from "framer-motion";
-import { MovingBorderButton } from "./nextui/moving-border";
+import { MovingBorderButton } from "../nextui/moving-border";
 
 function PromptParaItem({
   children,

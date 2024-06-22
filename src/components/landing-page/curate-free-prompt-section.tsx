@@ -11,11 +11,13 @@ import urbanNinja from "@/assets/images/curate-images/jimmymjing_urban_ninja_in_
 import Image from "next/image";
 import { Button } from "@nextui-org/button";
 import { motion } from "framer-motion";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
+
 export default function CuratedFreePromptSection() {
   return (
     <div className="flex w-full flex-col justify-center gap-4 bg-[#1A1B1E]">
       <div className="pointer-events-none z-50 flex h-[150px] flex-col justify-center bg-gradient-to-b from-black"></div>
-      <h1 className="m-auto font-walsheim text-5xl text-white">
+      <h1 className="m-auto font-walsheim text-[85px] text-white">
         Curated free prompts
       </h1>
       <h1 className="m-auto max-w-[900px] text-lg text-gray-100">
@@ -24,7 +26,7 @@ export default function CuratedFreePromptSection() {
         month. Plans start at $9.95/mo
       </h1>
 
-      <div className="m-auto flex flex-row gap-4 overflow-hidden pt-6">
+      <div className="m-auto flex flex-row gap-4 overflow-hidden pt-14">
         <PromptItem modelTxt="Midjourney | V6" durTxt="Free – Mar 21st">
           <Image
             src={urbanNinja}
@@ -45,9 +47,15 @@ export default function CuratedFreePromptSection() {
         </PromptItem>
       </div>
 
-      <h1 className="m-auto w-[700px] pt-28 text-center font-walsheim text-[84px] leading-[6rem] text-black">
-        abc
-      </h1>
+      <motion.div
+        className="m-auto flex w-full justify-center pt-3"
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+      >
+        <Button color="primary" endContent={<ArrowRightIcon className="w-5" />}>
+          Browse more free prompts
+        </Button>
+      </motion.div>
     </div>
   );
 }
@@ -63,7 +71,7 @@ function PromptItem({
 }) {
   return (
     <motion.div
-      whileHover={{ y: -20 }}
+      whileHover={{ y: -10 }}
       onHoverStart={(e) => {}}
       onHoverEnd={(e) => {}}
       className="relative flex h-[492px] w-[320px] flex-col justify-center overflow-hidden rounded-md bg-slate-400"
@@ -74,7 +82,7 @@ function PromptItem({
       </div>
       <div className="absolute bottom-2 z-30 m-auto flex w-full justify-center">
         <Button
-          color="primary"
+          color="secondary"
           size="lg"
           className="mx-2"
           radius="full"
