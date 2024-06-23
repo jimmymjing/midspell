@@ -18,17 +18,20 @@ export default function CuratedFreePromptSection() {
   return (
     <div className="flex w-full flex-col justify-center gap-4 overflow-hidden bg-[#1A1B1E]">
       <div className="pointer-events-none z-50 flex h-[150px] flex-col justify-center overflow-hidden bg-gradient-to-b from-black"></div>
-      <Spotlight className="absolute z-0 overflow-hidden" fill="white" />
-      <h1 className="m-auto font-walsheim text-[85px] text-white">
+      <Spotlight
+        className="absolute z-0 overflow-hidden max-md:hidden"
+        fill="white"
+      />
+      <h1 className="m-auto px-4 font-walsheim text-[85px] leading-[4.5rem] text-white">
         Curated free prompts
       </h1>
-      <h1 className="m-auto max-w-[900px] text-lg text-gray-100">
+      <h1 className="m-auto max-w-[900px] px-4 pt-6 text-lg text-gray-100">
         Download free promoted assets on Creative Market. Become a member to
         access additional hand picked free asset Drops worth up to $1,000 every
         month. Plans start at $9.95/mo
       </h1>
 
-      <div className="m-auto flex flex-row gap-4 overflow-hidden pt-14">
+      <div className="m-auto flex flex-row flex-wrap items-center justify-center gap-4 overflow-hidden pt-14 lg:flex-nowrap">
         <PromptItem modelTxt="Midjourney | V6" durTxt="Free – Mar 21st">
           <Image
             src={urbanNinja}
@@ -76,7 +79,7 @@ function PromptItem({
       whileHover={{ y: -10 }}
       onHoverStart={(e) => {}}
       onHoverEnd={(e) => {}}
-      className="relative flex h-[492px] w-[320px] flex-col justify-center overflow-hidden rounded-md bg-slate-400"
+      className="relative flex h-[492px] w-[320px] justify-center overflow-hidden rounded-md md:h-[492px] md:w-[320px]"
     >
       {children}
       <div className="absolute left-2 top-2 rounded-sm bg-black/60 px-4 py-2 text-sm text-white">

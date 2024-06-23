@@ -15,7 +15,7 @@ export const Spotlight = ({ className, fill }: SpotlightProps) => {
       viewport={{ once: false, amount: 0.4 }}
       transition={{ delay: 0, duration: 2 }}
       className={cn(
-        "pointer-events-none absolute h-[169%] w-[138%] opacity-0 lg:w-[84%]",
+        "pointer-events-none absolute h-[169%] w-[100%] opacity-0 lg:w-[84%]",
         className,
       )}
       xmlns="http://www.w3.org/2000/svg"

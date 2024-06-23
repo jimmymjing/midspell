@@ -11,6 +11,7 @@ import CuratedFreePromptSection from "@/components/landing-page/curate-free-prom
 import { motion } from "framer-motion";
 import MagicAcademySection from "@/components/landing-page/magic-academy-section";
 import CategoryMarqueeSection from "@/components/landing-page/category-marquee-section";
+import Footer from "@/components/footer";
 
 const suggestionChipList: string[] = [
   "illustration",
@@ -77,9 +78,7 @@ export default function Home() {
       {/* <ParallaxScrollImages /> */}
 
       {/* <TagGroupFilter /> */}
-      <div>
-        dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-      </div>
+      <Footer />
     </main>
   );
 }

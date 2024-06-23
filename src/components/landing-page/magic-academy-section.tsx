@@ -41,14 +41,14 @@ const contentArray = [
     title: "General Modifiers in Midjourney",
     brief:
       "In a nutshell, a GenMod is a keyword that can be used to modify the behavior of a spell.",
-    imgSrc: "/magic-academy/ma3.jpg",
+    imgSrc: "/magic-academy/ma10.webp",
   },
   {
     link: "https://www.google.com",
     title: "In Focus Claude Cahun",
     brief:
       "The protagonist of today's In Focus episode is the extraordinary Lucy Schwob, better known by her pseudonym—Claude Cahun.",
-    imgSrc: "/magic-academy/ma4.webp",
+    imgSrc: "/magic-academy/ma11.webp",
   },
   {
     link: "https://www.google.com",

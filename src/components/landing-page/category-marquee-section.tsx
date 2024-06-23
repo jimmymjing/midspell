@@ -67,8 +67,8 @@ function CategoryItem({
     <Link href={link} target="_blank" className="">
       <div className="flex w-[200px] flex-shrink-0 flex-col items-start gap-3 p-3">
         <div className="group relative h-full w-full">
-          <div className="absolute -top-[8px] left-[8px] h-[150px] w-[176px] rounded-sm bg-green-200 group-hover:-top-[12px] group-hover:left-[12px] group-hover:delay-75 group-hover:duration-300"></div>
-          <div className="absolute -top-[4px] left-[4px] h-[150px] w-[176px] rounded-sm bg-purple-300 group-hover:-top-[6px] group-hover:left-[6px] group-hover:duration-300"></div>
+          <div className="absolute -top-[8px] left-[8px] h-[150px] w-[176px] rounded-sm bg-green-200 group-hover:-top-[12px] group-hover:left-[12px] group-hover:delay-75 group-hover:duration-200"></div>
+          <div className="absolute -top-[4px] left-[4px] h-[150px] w-[176px] rounded-sm bg-purple-300 group-hover:-top-[6px] group-hover:left-[6px] group-hover:duration-200"></div>
           <Image
             src={img}
             alt="logo"
