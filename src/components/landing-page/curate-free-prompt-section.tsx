@@ -12,11 +12,13 @@ import Image from "next/image";
 import { Button } from "@nextui-org/button";
 import { motion } from "framer-motion";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { Spotlight } from "../ui/Spotlight";
 
 export default function CuratedFreePromptSection() {
   return (
-    <div className="flex w-full flex-col justify-center gap-4 bg-[#1A1B1E]">
-      <div className="pointer-events-none z-50 flex h-[150px] flex-col justify-center bg-gradient-to-b from-black"></div>
+    <div className="flex w-full flex-col justify-center gap-4 overflow-hidden bg-[#1A1B1E]">
+      <div className="pointer-events-none z-50 flex h-[150px] flex-col justify-center overflow-hidden bg-gradient-to-b from-black"></div>
+      <Spotlight className="absolute z-0 overflow-hidden" fill="white" />
       <h1 className="m-auto font-walsheim text-[85px] text-white">
         Curated free prompts
       </h1>

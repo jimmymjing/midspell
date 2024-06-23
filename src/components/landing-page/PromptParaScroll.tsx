@@ -57,7 +57,7 @@ export default function PromptParaScroll() {
   return (
     <>
       {/* miw_content-track */}
-      <div className="relative h-[150rem] overflow-clip bg-black">
+      <div className="relative z-10 h-[150rem] overflow-clip bg-black">
         <div className="pointer-events-none absolute z-20 h-[150rem] w-full bg-gradient-to-t from-black from-0% to-10%"></div>
         {/* <div className="relative h-[150rem] overflow-clip bg-gradient-to-t from-black from-0% to-10%"> */}
         {/* miw_overlay-track */}

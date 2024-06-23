@@ -103,7 +103,7 @@ export default function MagicAcademySection() {
   return (
     <div className="h-full w-full overflow-hidden">
       <AuroraBackground className="h-full w-full overflow-hidden">
-        <div className="pointer-events-none z-50 flex h-[20px] flex-col justify-center bg-gradient-to-b from-[#1A1B1E]"></div>
+        <div className="pointer-events-none z-50 flex h-[20px] w-full flex-col justify-center bg-gradient-to-b from-[#1A1B1E]"></div>
         <div className="relative m-auto w-[90%] max-w-7xl">
           {/* s_content-w is--started */}
 
