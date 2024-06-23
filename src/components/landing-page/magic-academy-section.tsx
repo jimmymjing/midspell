@@ -100,6 +100,11 @@ export default function MagicAcademySection() {
     if (api) api.scrollNext();
   }, [api]);
 
+  const variants = {
+    hoverL: { x: -4 },
+    hoverR: { x: 4 },
+  };
+
   return (
     <div className="h-full w-full overflow-hidden">
       <AuroraBackground className="h-full w-full overflow-hidden">
@@ -126,18 +131,24 @@ export default function MagicAcademySection() {
               </div>
               {/* swiper_arrow-w */}
               <div className="flex items-center gap-0">
-                <div
+                <motion.div
+                  whileHover={variants.hoverL}
                   onClick={scrollPrev}
-                  className="flex cursor-pointer items-center justify-center p-4"
+                  className="group flex cursor-pointer items-center justify-center p-4"
                 >
-                  <ArrowLeftIcon className="w-6" />
-                </div>
-                <div
+                  <motion.div variants={variants}>
+                    <ArrowLeftIcon className="w-6 fill-black group-hover:fill-[#146ef5]" />
+                  </motion.div>
+                </motion.div>
+                <motion.div
+                  whileHover={variants.hoverR}
                   onClick={scrollNext}
-                  className="flex cursor-pointer items-center justify-center p-4"
+                  className="group flex cursor-pointer items-center justify-center p-4"
                 >
-                  <ArrowRightIcon className="w-6" />
-                </div>
+                  <motion.div variants={variants}>
+                    <ArrowRightIcon className="w-6 fill-black group-hover:fill-[#146ef5]" />
+                  </motion.div>
+                </motion.div>
               </div>
             </div>
             {/* swiper-w is--getstarted */}
@@ -211,6 +222,7 @@ export default function MagicAcademySection() {
           </Button>
         </motion.div>
       </AuroraBackground>
+      <div className="pointer-events-none z-50 flex h-[20px] w-full flex-col justify-center bg-gradient-to-t from-[#1A1B1E]"></div>
     </div>
   );
 }

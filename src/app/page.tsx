@@ -10,6 +10,7 @@ import PromptParaScroll from "../components/landing-page/PromptParaScroll";
 import CuratedFreePromptSection from "@/components/landing-page/curate-free-prompt-section";
 import { motion } from "framer-motion";
 import MagicAcademySection from "@/components/landing-page/magic-academy-section";
+import CategoryMarqueeSection from "@/components/landing-page/category-marquee-section";
 
 const suggestionChipList: string[] = [
   "illustration",
@@ -72,6 +73,7 @@ export default function Home() {
       <PromptParaScroll />
       <CuratedFreePromptSection />
       <MagicAcademySection />
+      <CategoryMarqueeSection />
       {/* <ParallaxScrollImages /> */}
 
       {/* <TagGroupFilter /> */}
