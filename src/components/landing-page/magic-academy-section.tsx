@@ -8,7 +8,6 @@ import {
 // import Image from  "next/image";
 import { Image } from "@nextui-org/react";
 import NextImage from "next/image";
-import urbanNinja from "@/assets/images/curate-images/jimmymjing_urban_ninja_in_fairy_kei_style_by_nick_knight_86909131-f2e5-4a96-b4b5-dec00476138c_2.png";
 import { motion } from "framer-motion";
 import { useCallback } from "react";
 import {
@@ -19,6 +18,74 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
+import { Button } from "@nextui-org/button";
+import { AuroraBackground } from "@/components/ui/aurora-background";
+
+const contentArray = [
+  {
+    link: "https://www.google.com",
+    title: "Graphic Design Trends 2024",
+    brief:
+      "From vibrant book covers to stylish advertising banners, graphic design gives color and shape to our lives. ",
+    imgSrc: "/magic-academy/ma1.jpg",
+  },
+  {
+    link: "https://www.google.com",
+    title: "11 Most Colorful Styles",
+    brief:
+      "From vibrant book covers to stylish advertising banners, graphic design gives color and shape to our lives. ",
+    imgSrc: "/magic-academy/ma2.jpg",
+  },
+  {
+    link: "https://www.google.com",
+    title: "General Modifiers in Midjourney",
+    brief:
+      "In a nutshell, a GenMod is a keyword that can be used to modify the behavior of a spell.",
+    imgSrc: "/magic-academy/ma3.jpg",
+  },
+  {
+    link: "https://www.google.com",
+    title: "In Focus Claude Cahun",
+    brief:
+      "The protagonist of today's In Focus episode is the extraordinary Lucy Schwob, better known by her pseudonym—Claude Cahun.",
+    imgSrc: "/magic-academy/ma4.webp",
+  },
+  {
+    link: "https://www.google.com",
+    title: "Study Manuscripts, Codices, and Bestiaries",
+    brief:
+      "Many of these fascinating artifacts continue to captivate and inspire study in the modern age. Some served as legitimate",
+    imgSrc: "/magic-academy/ma5.webp",
+  },
+  {
+    link: "https://www.google.com",
+    title: "Midjourney's Super-Tiling Technique",
+    brief:
+      "Let’s say you want to create “Where’s Waldo?”-like artwork: intricate, detailed, expansive, and with a hand-drawn look. After trial and error",
+    imgSrc: "/magic-academy/ma6.webp",
+  },
+  {
+    link: "https://www.google.com",
+    title: "The Midjourney Halloween",
+    brief:
+      "As Halloween approaches, it's time to get ready with your creepy costumes, scary masks, eerie decorations, and, of course, horror-themed postcards",
+    imgSrc: "/magic-academy/ma7.jpg",
+  },
+  {
+    link: "https://www.google.com",
+    title: "In Focus Sandro Botticelli",
+    brief:
+      "How Sandro Botticelli, one of the greatest painters of the Florentine Renaissance, is linked to Italian fascist dictator Benito Mussolini",
+    imgSrc: "/magic-academy/ma8.jpg",
+  },
+  {
+    link: "https://www.google.com",
+    title: "15 Styles Favored by Midlibrary Collectors",
+    brief:
+      "There are two fundamental changes in how we approach Style Tops that this edition signifies. First, we're shifting from a benchmark-style approach",
+    imgSrc: "/magic-academy/ma9.jpg",
+  },
+];
 
 export default function MagicAcademySection() {
   const [api, setApi] = React.useState<CarouselApi>();
@@ -35,79 +102,83 @@ export default function MagicAcademySection() {
 
   return (
     <div className="h-full w-full overflow-hidden">
-      <div className="pointer-events-none z-50 flex h-[20px] flex-col justify-center bg-gradient-to-b from-[#1A1B1E]"></div>
-      <div className="relative m-auto w-[90%] max-w-7xl">
-        {/* s_content-w is--started */}
+      <AuroraBackground className="h-full w-full overflow-hidden">
+        <div className="pointer-events-none z-50 flex h-[20px] flex-col justify-center bg-gradient-to-b from-[#1A1B1E]"></div>
+        <div className="relative m-auto w-[90%] max-w-7xl">
+          {/* s_content-w is--started */}
 
-        <div className="relative pt-40">
-          {/* hl_headline-w */}
-          <div className="mb-8 max-w-[850px]">
-            {/* hero-title */}
-            <h1 className="font-walsheim text-[85px] leading-[5rem]">
-              Magic Academy will get you started
-            </h1>
-          </div>
-          {/* gs_headline-flex */}
-          <div className="mb-24 flex justify-between align-bottom">
-            {/* hl_subheadline-w */}
-            <div className="mb-0 max-w-[50%]">
-              <p className="text-lg">
-                Browse the Marketplace, educational videos, and customer stories
-                to find what you need to succeed with Webflow.
-              </p>
+          <div className="relative pt-40">
+            {/* hl_headline-w */}
+            <div className="mb-8 max-w-[850px]">
+              {/* hero-title */}
+              <h1 className="font-walsheim text-[85px] leading-[5rem]">
+                Magic Academy will get you started
+              </h1>
             </div>
-            {/* swiper_arrow-w */}
-            <div className="flex items-center gap-0">
-              <div
-                onClick={scrollPrev}
-                className="flex cursor-pointer items-center justify-center p-4"
-              >
-                <ArrowLeftIcon className="w-6" />
+            {/* gs_headline-flex */}
+            <div className="mb-24 flex justify-between align-bottom">
+              {/* hl_subheadline-w */}
+              <div className="mb-0 max-w-[50%]">
+                <p className="text-lg">
+                  Browse the Marketplace, educational videos, and customer
+                  stories to find what you need to succeed with Webflow.
+                </p>
               </div>
-              <div
-                onClick={scrollNext}
-                className="flex cursor-pointer items-center justify-center p-4"
-              >
-                <ArrowRightIcon className="w-6" />
+              {/* swiper_arrow-w */}
+              <div className="flex items-center gap-0">
+                <div
+                  onClick={scrollPrev}
+                  className="flex cursor-pointer items-center justify-center p-4"
+                >
+                  <ArrowLeftIcon className="w-6" />
+                </div>
+                <div
+                  onClick={scrollNext}
+                  className="flex cursor-pointer items-center justify-center p-4"
+                >
+                  <ArrowRightIcon className="w-6" />
+                </div>
               </div>
             </div>
-          </div>
-          {/* swiper-w is--getstarted */}
-          <div className="box-border">
-            <div className="relative z-10 m-auto block touch-pan-y overflow-visible">
-              {/* swiper-wrapper */}
-              <div className="relative z-10 box-content flex h-full w-full flex-row">
-                {/* each swipe card */}
-                {/* todo: indi card */}
+            {/* swiper-w is--getstarted */}
+            <div className="box-border">
+              <div className="relative z-10 m-auto block touch-pan-y overflow-visible">
+                {/* swiper-wrapper */}
+                <div className="relative z-10 box-content flex h-full w-full flex-row">
+                  {/* each swipe card */}
+                  {/* todo: indi card */}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className="h-full w-full pb-16">
-        <Carousel
-          opts={{
-            align: "start",
-          }}
-          className="w-full max-w-full"
-          setApi={setApi}
-        >
-          <CarouselContent className="ml-[5%]">
-            <CarouselItem key={111111} className="basis-[420px]">
-              <ArticleItem
-                link="https://www.google.com"
-                title="abc"
-                brief="aaa"
-              >
-                <Image
-                  isZoomed
-                  radius="none"
-                  alt="NextUI Fruit Image with Zoom"
-                  src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80"
-                />
-              </ArticleItem>
-            </CarouselItem>
-            {Array.from({ length: 10 }).map((_, index) => (
+        <div className="h-full w-full">
+          <Carousel
+            opts={{
+              align: "start",
+            }}
+            className="w-full max-w-full"
+            setApi={setApi}
+          >
+            <CarouselContent className="ml-[5%] pb-16">
+              {contentArray.map((content, index) => (
+                <CarouselItem key={index} className="basis-[420px] pl-12">
+                  <ArticleItem
+                    link={content.link}
+                    title={content.title}
+                    brief={content.brief}
+                  >
+                    <Image
+                      isZoomed
+                      radius="none"
+                      alt="NextUI Fruit Image with Zoom"
+                      src={content.imgSrc}
+                    />
+                  </ArticleItem>
+                </CarouselItem>
+              ))}
+              ;
+              {/* {Array.from({ length: 10 }).map((_, index) => (
               <CarouselItem key={index} className="basis-[420px] pl-12">
                 <ArticleItem
                   link="https://www.google.com"
@@ -123,10 +194,23 @@ export default function MagicAcademySection() {
                   />
                 </ArticleItem>
               </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
-      </div>
+            ))} */}
+            </CarouselContent>
+          </Carousel>
+        </div>
+        <motion.div
+          className="m-auto mb-7 flex w-full justify-center pt-3"
+          initial={{ opacity: 0, scale: 0.5 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+        >
+          <Button
+            color="primary"
+            endContent={<ArrowRightIcon className="w-5" />}
+          >
+            Browse more in Magic Academy
+          </Button>
+        </motion.div>
+      </AuroraBackground>
     </div>
   );
 }
