@@ -1,5 +1,5 @@
 "use client";
-import { BackgroundGradientAnimation } from "@/components/background-gradient-animation";
+import { BackgroundGradientAnimation } from "@/components/landing-page/background-gradient-animation";
 import HomeHeader from "@/components/home-header";
 import React from "react";
 
