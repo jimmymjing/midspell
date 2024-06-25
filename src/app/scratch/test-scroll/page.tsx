@@ -14,7 +14,7 @@ const images = [
   image,
 }));
 
-export default function page() {
+export default function TestScroll() {
   const [ref, { width, height }] = useMeasure();
 
   useEffect(() => {
