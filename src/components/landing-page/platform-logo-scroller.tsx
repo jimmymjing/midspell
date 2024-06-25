@@ -20,7 +20,7 @@ export default function PlatformLogoScroller() {
 
   useEffect(() => {
     let controls;
-    let finalPosition = -width / 2 - 56;
+    let finalPosition = -Number(width) / 2 - 56;
     console.log("width", width);
 
     controls = animate(xTranslation, [0, finalPosition], {
