@@ -31,27 +31,62 @@ export default function CuratedFreePromptSection() {
         month. Plans start at $9.95/mo
       </h1>
 
-      <div className="m-auto flex flex-row flex-wrap items-center justify-center gap-4 overflow-hidden pt-14 lg:flex-nowrap">
-        <PromptItem modelTxt="Midjourney | V6" durTxt="Free – Mar 21st">
-          <Image
-            src={urbanNinja}
-            alt="Urban Ninja"
-            fill
-            className="object-cover"
-          />
-        </PromptItem>
-        <PromptItem modelTxt="Midjourney | V6" durTxt="Free – Mar 21st">
-          <BackgroundVideo src={wonderWoman} autoPlay />;
-          {/* <Player src={awesomeVideo} /> */}
-        </PromptItem>
-        <PromptItem modelTxt="Midjourney | V6" durTxt="Free – Mar 21st">
-          <BackgroundVideo src={goldenWoman} autoPlay />;
-        </PromptItem>
-        <PromptItem modelTxt="Midjourney | V6" durTxt="Free – Mar 21st">
-          <BackgroundVideo src={spaceman} autoPlay />;
-        </PromptItem>
+      {/* <div className="m-auto flex flex-row flex-wrap items-center justify-center gap-4 overflow-hidden pt-14 lg:flex-nowrap"> */}
+      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        {/* <div className="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8"> */}
+        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+          <PromptItem
+            modelTxt="Midjourney | V6"
+            durTxt="Free – Mar 21st"
+            pid="1"
+          >
+            <div className="aspect-h-1 aspect-w-1 sm:aspect-h-4 sm:aspect-w-3 md:aspect-h-4 md:aspect-w-3 lg:aspect-none w-full overflow-hidden rounded-md bg-black group-hover:opacity-75 sm:h-[360px] md:h-[360px] lg:h-[430px]">
+              <Image
+                src={urbanNinja}
+                alt="Urban Ninja"
+                // fill
+                className="h-full w-full rounded-md object-cover object-center lg:h-full lg:w-full"
+              />
+            </div>
+          </PromptItem>
+          <PromptItem
+            modelTxt="Midjourney | V6"
+            durTxt="Free – Mar 21st"
+            pid="2"
+          >
+            <BackgroundVideo
+              src={wonderWoman}
+              autoPlay
+              className="h-full w-full object-cover object-center"
+            />
+            ;{/* <Player src={awesomeVideo} /> */}
+          </PromptItem>
+          <PromptItem
+            modelTxt="Midjourney | V6"
+            durTxt="Free – Mar 21st"
+            pid="3"
+          >
+            <BackgroundVideo
+              src={goldenWoman}
+              autoPlay
+              className="h-full w-full object-cover object-center"
+            />
+            ;
+          </PromptItem>
+          <PromptItem
+            modelTxt="Midjourney | V6"
+            durTxt="Free – Mar 21st"
+            pid="4"
+          >
+            <BackgroundVideo
+              src={spaceman}
+              autoPlay
+              className="h-full w-full object-cover object-center"
+            />
+            ;
+          </PromptItem>
+        </div>
       </div>
-
       <motion.div
         className="m-auto mb-7 flex w-full justify-center pt-3"
         initial={{ opacity: 0, scale: 0.5 }}
@@ -66,6 +101,44 @@ export default function CuratedFreePromptSection() {
 }
 
 function PromptItem({
+  children,
+  modelTxt,
+  durTxt,
+  pid,
+}: {
+  children: React.ReactNode;
+  modelTxt: string;
+  durTxt: string;
+  pid: string;
+}) {
+  return (
+    <motion.div
+      whileHover={{ y: -10 }}
+      onHoverStart={(e) => {}}
+      onHoverEnd={(e) => {}}
+      key={pid}
+      className="group relative"
+    >
+      <div className="aspect-none h-full w-full overflow-hidden rounded-md bg-black group-hover:-translate-y-0 group-hover:duration-75 sm:h-[360px] md:h-[360px] lg:h-[420px]">
+        {children}
+      </div>
+
+      <div className="absolute bottom-2 z-30 m-auto flex w-full justify-center">
+        <Button
+          color="secondary"
+          size="lg"
+          className="mx-2"
+          radius="full"
+          fullWidth
+        >
+          {durTxt}
+        </Button>
+      </div>
+    </motion.div>
+  );
+}
+
+function PromptItemBak({
   children,
   modelTxt,
   durTxt,
