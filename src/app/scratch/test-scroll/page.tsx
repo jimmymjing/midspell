@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import LogoScrollerItem from "@/components/logo-scroller-item";
+import LogoScrollerItem from "@/components/landing-page/logo-scroller-item";
 import { useMeasure } from "@uidotdev/usehooks";
 const images = [
   "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8&w=1000&q=80",

@@ -1,4 +1,4 @@
-import PlatformLogoScroller from "@/components/platform-logo-scroller";
+import PlatformLogoScroller from "@/components/landing-page/platform-logo-scroller";
 import React from "react";
 
 export default function page() {
