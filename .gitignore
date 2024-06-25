@@ -9,8 +9,6 @@
 # testing
 /coverage
 
-/src/app/scratch
-
 # next.js
 /.next/
 /out/
