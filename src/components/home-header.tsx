@@ -10,6 +10,7 @@ import Journal from "./icons/journal.svg";
 import VideoProjector from "./icons/video-projector.svg";
 import Building07 from "./icons/building-07.svg";
 import SleeperChair from "./icons/sleeper-chair.svg";
+import VidImgToggle from "./vid-img-toggle";
 
 const navigation = [
   { name: "Explore", href: "#" },
@@ -31,7 +32,7 @@ const signInHandler = () => {
   console.log("signInHandler ");
 };
 
-function classNames(...classes) {
+function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(" ");
 }
 
@@ -83,6 +84,7 @@ export default function HomeHeader() {
           className="hidden lg:flex lg:space-x-8 lg:py-2"
           aria-label="Global"
         >
+          <VidImgToggle />
           {secondaryNavigation.map((item) => (
             <a
               key={item.name}

@@ -14,7 +14,7 @@ const config = {
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
-    "./node_modules/@nextui-org/theme/dist/components/(button|checkbox|chip|image|ripple|spinner).js",
+    "./node_modules/@nextui-org/theme/dist/components/(button|checkbox|chip|image|tabs|ripple|spinner).js",
   ],
   prefix: "",
   theme: {
