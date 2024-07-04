@@ -9,6 +9,8 @@ export async function GET(request: NextRequest) {
   const token_hash = searchParams.get("token_hash");
   const type = searchParams.get("type") as EmailOtpType | null;
   const next = searchParams.get("next") ?? "/";
+  const redirectTo = request.nextUrl.clone();
+  redirectTo.pathname = next;
 
   if (token_hash && type) {
     const supabase = createClient();
@@ -17,12 +19,19 @@ export async function GET(request: NextRequest) {
       type,
       token_hash,
     });
+    console.log("error from auth callback route", error);
+    console.log("next  ", next);
     if (!error) {
       // redirect user to specified redirect URL or root of app
       redirect(next);
+      //return NextResponse.redirect(redirectTo);
     }
   }
 
   // redirect the user to an error page with some instructions
   redirect("/error");
+
+  // return the user to an error page with some instructions
+  //redirectTo.pathname = "/auth/auth-code-error";
+  //return NextResponse.redirect(redirectTo);
 }
