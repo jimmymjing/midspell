@@ -19,8 +19,7 @@ export async function GET(request: NextRequest) {
       type,
       token_hash,
     });
-    console.log("error from auth callback route", error);
-    console.log("next  ", next);
+
     if (!error) {
       // redirect user to specified redirect URL or root of app
       redirect(next);
