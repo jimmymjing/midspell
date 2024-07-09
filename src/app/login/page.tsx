@@ -52,6 +52,15 @@ export default function TestGoogleOAuth() {
         />
         <button formAction={socialLogin}>Login github</button>
       </form>
+      <form>
+        <input
+          id="providerName"
+          name="providerName"
+          value="twitter"
+          type="hidden"
+        />
+        <button formAction={socialLogin}>Login twitter</button>
+      </form>
       <button onClick={handleLogin}>Client-side Login Google </button>;
     </>
   );
